@@ -1,0 +1,251 @@
+.sidebar-social {
+position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-social a {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #f0389a 0%, #2040df 100%);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-social a:hover {
+    transform: scale(1.2) translateX(5px);
+    filter: brightness(1.2);
+    box-shadow: 0 0 20px rgba(240, 56, 154, 0.6), 0 0 40px rgba(32, 64, 223, 0.4);
+}
+
+.sidebar-social svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.music-bar-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    width: auto;
+}
+
+.glass-music-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: auto;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-music-bar:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(32, 64, 223, 0.2);
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.music-text {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.custom-audio {
+    height: 30px;
+    width: 300px;
+    transition: width 0.3s ease;
+    filter: sepia(1) saturate(7) hue-rotate(280deg) brightness(1);
+    
+    opacity: 0.4;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: transparent;
+}
+
+.music-icon {
+    animation: pulse-music 2s infinite;
+}
+
+@keyframes pulse-music {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.main-wrapper {
+    height: auto; 
+    min-height: unset;
+
+    max-width: 1100px;
+    margin: 90px auto 40px auto; 
+    
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    display: flow-root; 
+}
+
+.glass-footer {
+    max-width: 700px;
+    margin: 20px auto 40px auto;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 20px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 80px;
+}
+
+.footer-section {
+    min-width: 150px; 
+    max-width: 250px;
+}
+
+.footer-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #9d49a0;
+    font-weight: 700;
+}
+
+.footer-section p, 
+.footer-section li, 
+.footer-section a {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #c1aaea !important; 
+    background-image: url('../uploads/wp8980364.jpg') !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100% !important;
+}
+
+.custom-table {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #d1c4e9;
+    box-shadow: 0 0 0 0.25rem rgba(209, 196, 233, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #f0389a 0%, #2040df 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.custom-table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#bookSearch:focus {
+    border-color: #2040df;
+    box-shadow: 0 0 0 0.25 cereal rgba(32, 64, 223, 0.25);
+}
+
+#searchSuggestions .list-group-item {
+    padding: 8px 12px; /* Am redus padding-ul de la 12px/15px */
+    gap: 8px;
+}
+
+#searchSuggestions img {
+    width: 30px; /* Imaginea puțin mai mică */
+    height: 42px;
+    border-radius: 3px;
+}
+
+/* Facem badge-ul de status puțin mai mic în search */
+#searchSuggestions .badge {
+    font-size: 0.7rem;
+    padding: 4px 10px !important;
+}
